@@ -86,4 +86,4 @@ def stopServer():
         c.remove()
     
     
-bot.run(token, log_handler=handler, log_level=logging.INFO)
+bot.run(token, log_handler=handler, log_level=logging.DEBUG)

@@ -60,6 +60,7 @@ def runServer():
         }
     )
     containers["mc-server-1"] = mc1
+    print("Minecraft server started")
 
     # buat container playit
     playit = client.containers.run(
@@ -72,6 +73,7 @@ def runServer():
         
     )
     containers["playit"] = playit
+    print("Playit started")
 
 # stop container
 def stopServer():

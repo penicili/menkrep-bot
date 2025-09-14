@@ -25,7 +25,7 @@ bot = commands.Bot(command_prefix='!mc', intents=intents)
 # commands
 @bot.event
 async def on_ready():
-    print(f'{bot.user.name} is ready')
+    print(f'{bot.user} is ready')
 
 @bot.command(help="Nyalain server menkrep")
 async def start(ctx):
@@ -78,3 +78,6 @@ def stopServer():
     for c in containers.values():
         c.stop()
         c.remove()
+    
+    
+bot.run(token, log_handler=handler, log_level=logging.INFO)

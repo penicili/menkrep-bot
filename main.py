@@ -7,7 +7,7 @@ import docker
 
 # load env
 load_dotenv()
-token = os.getenv ("DISCORD_BOT_TOKEN")
+token = os.getenv ("DISCORD_TOKEN")
 playit_secret_key = os.getenv("PLAYIT_SECRET_KEY")
 
 # setup logging

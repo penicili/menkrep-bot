@@ -19,6 +19,28 @@ intents.message_content = True
 intents.members = True
 intents.voice_states = True
 
+# init bot
+bot = commands.Bot(command_prefix='!mc', intents=intents)
+
+# commands
+@bot.event
+async def on_ready():
+    print(f'{bot.user.name} is ready')
+
+@bot.command(help="Nyalain server menkrep")
+async def start(ctx):
+    allowed_roles = ['Admin', 'Minecraft']
+    runServer()
+    await ctx.send("Server menkrep nyala")
+
+@bot.command(help="Matikan server menkrep")
+async def stop(ctx):
+    allowed_roles = ['Admin', 'Minecraft']
+    stopServer()
+    await ctx.send("Server menkrep mati")
+
+
+
 # setup docker daemon
 client = docker.from_env()
 

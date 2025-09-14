@@ -114,7 +114,7 @@ def runServer():
             network_mode="host",
             detach=True,
             environment={
-                "PLAYIT_SECRET_KEY": playit_secret_key  # Fixed environment variable name
+                "SECRET_KEY": playit_secret_key  # Fixed environment variable name
             }
         )
         containers["playit"] = playit

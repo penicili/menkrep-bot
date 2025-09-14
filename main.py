@@ -29,12 +29,16 @@ async def on_ready():
 
 @bot.command(help="Nyalain server menkrep")
 async def start(ctx):
+    await ctx.send("wait")
+    print("Starting server...")
     allowed_roles = ['Admin', 'Minecraft']
     runServer()
     await ctx.send("Server menkrep nyala")
 
 @bot.command(help="Matikan server menkrep")
 async def stop(ctx):
+    await ctx.send("wait")
+    print("Stopping server...")
     allowed_roles = ['Admin', 'Minecraft']
     stopServer()
     await ctx.send("Server menkrep mati")

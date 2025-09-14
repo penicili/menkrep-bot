@@ -94,7 +94,7 @@ def runServer():
             "itzg/minecraft-server",
             name="mc-server-1",
             ports={'25565/tcp': 25565},
-            volumes={'./data': {'bind': '/data', 'mode': 'rw'}},
+            volumes={os.path.abspath('./data'): {'bind': '/data', 'mode': 'rw'}},
             detach=True,
             environment={
                 "EULA": "TRUE",

@@ -25,7 +25,7 @@ bot = commands.Bot(command_prefix='!mc', intents=intents)
 # commands
 @bot.event
 async def on_ready():
-    print(f'{bot.user} is ready')
+    print(f'{bot.user.name} is ready')
 
 @bot.command(help="Nyalain server menkrep")
 async def start(ctx):
